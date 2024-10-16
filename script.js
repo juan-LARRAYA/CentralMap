@@ -23,7 +23,7 @@ document.getElementById('calculateBtn').addEventListener('click', async function
     }
 
     try {
-        const response = await fetch('http://localhost:5000/calculate', {
+        const response = await fetch('https://67104a2cfd38be2e22b4ece2--ephemeral-beijinho-faea79.netlify.app/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -38,3 +38,6 @@ document.getElementById('calculateBtn').addEventListener('click', async function
         document.getElementById('result').textContent = 'Ocurrió un error al calcular el punto medio.';
     }
 });
+
+
+
