@@ -1,9 +1,10 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # Importa la extensión CORS
 import requests
 import time
 
 app = Flask(__name__)
-
+CORS(app)  # Habilita CORS para toda la app
 
 def get_coordinates_osm(address):
     url = f"https://nominatim.openstreetmap.org/search?q={address}&format=json&limit=1"
