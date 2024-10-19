@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CentralMap</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+</head>
+<body>
+    <h1 class="enhanced-title">CentralMap</h1>
+    <h2 class="enhanced-subtitle">El lugar del encuentro.</h2>
+
+    <div class="container">
+        <div id="addressesContainer">
+            <input type="text" placeholder="Ingrese una dirección: Dirección, barrio, Ciudad, País" class="address-input">
+        </div>
+        <div class="button-container">
+            <button onclick="addAddressInput()">Agregar Dirección</button>
+            <button onclick="calculate()">Calcular Centro de Masa</button>
+        </div>
+        <p id="result"></p>
+        <div id="map"></div>
+    </div>
+
+    <footer>
+        Desarrollado por Juan Cruz Larraya. Visita mi <a href="https://github.com/juan-LARRAYA" target="_blank">GitHub</a> y <a href="https://www.linkedin.com/in/juan-cruz-larraya/" target="_blank">LinkedIn</a>.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
