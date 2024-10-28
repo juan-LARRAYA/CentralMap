@@ -47,6 +47,12 @@ body {
     min-height: calc(100vh - 500px); /* Ajusta la altura de acuerdo al footer */
 }
 
+.input-container {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+
 #addressesContainer {
     display: flex;
     flex-direction: column;
@@ -56,6 +62,7 @@ body {
 
 .address-input {
     padding: 10px;
+    width: 100%; 
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 1rem;
@@ -67,6 +74,45 @@ body {
     border-color: #3498db;
     box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
+
+.input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.suggestions-list {
+    list-style-type: none;
+    border-radius: 8px;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.suggestions-list:empty {
+    border: none; /* Elimina el borde cuando está vacío */
+    display: none; /* Opcional: oculta completamente cuando está vacío */
+}
+
+.suggestions-list li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestions-list li:hover {
+    background-color: #e0e0e0;
+}
+
 
 button {
     padding: 10px 15px;

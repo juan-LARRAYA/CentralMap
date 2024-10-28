@@ -14,16 +14,19 @@
 
     <div class="container">
         <div id="addressesContainer">
-            <input type="text" placeholder="Ingrese una dirección: Dirección, barrio, Ciudad, País" class="address-input">
+            <div class="input-container">
+                <input type="text" id="addressInput" placeholder="Ingrese una dirección: Dirección, barrio, Ciudad, País" class="address-input">
+                <ul id="suggestionsList" class="suggestions-list"></ul>
+            </div>
         </div>
         <div class="button-container">
             <button onclick="addAddressInput()">Agregar Dirección</button>
             <button onclick="calculate()">Calcular Centro de Masa</button>
         </div>
-        <p id="result"></p>
         <div id="map"></div>
+        <p id="result"></p>
     </div>
-
+    
     <footer>
         Desarrollado por Juan Cruz Larraya. Visita mi <a href="https://github.com/juan-LARRAYA" target="_blank">GitHub</a> y <a href="https://www.linkedin.com/in/juan-cruz-larraya/" target="_blank">LinkedIn</a>.
     </footer>
