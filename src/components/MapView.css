@@ -1,0 +1,71 @@
+.map-container {
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map {
+  height: 400px;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Custom center marker styles */
+.center-marker {
+  background: transparent;
+  border: none;
+}
+
+.center-marker-inner {
+  width: 24px;
+  height: 24px;
+  background-color: #e74c3c;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .map {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map {
+    height: 250px;
+  }
+}
+
+/* Ensure Leaflet controls are accessible */
+.leaflet-control-zoom a {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+/* Improve popup readability */
+.leaflet-popup-content {
+  margin: 13px 19px;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+}
